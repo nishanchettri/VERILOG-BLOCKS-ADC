@@ -1,0 +1,26 @@
+\begin{table}[htbp]
+    \centering
+    \begin{adjustbox}{width=1\textwidth}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline
+         & Shoubhik et al.(JSSC2018) & Liu et al.(JSSC2019) & T.Wang et al.(JSSC2021) &  \textbf{This work}  \\
+        \hline
+        Architecture & Zoom ADC & PASSIVE NS SAR & NS-SAR-EF-CIFF & \textbf{Two stage CM-SAR}  \\
+        \hline
+        Process & 160nm CMOS & 40nm CMOS & 65nm CMOS & \textbf{130nm CMOS } \\
+        \hline
+        Supply [V] & 1.8 & 1.1 & 1.1 & \textbf{1.8}  \\
+        \hline
+        Bandwidth [kHz] & 1 & 10 & 625 &  \textbf{889}  \\
+        \hline
+        Sample rate [MS/s] & 2 & 2 & 10 &  \textbf{1.778}  \\
+        \hline
+        SNDR [dB] & 118.1 & 95.3 & 84.8 &  \textbf{98.262}  \\
+        \hline
+        ENOB & 20b & 15.4b & 13.8b &  \textbf{16b} \\
+        \hline
+    \end{tabular}
+    \end{adjustbox}
+    \caption{Comparison with state of the art architectures.}
+    \label{ch-conc-tab-comparison-table}
+\end{table}
