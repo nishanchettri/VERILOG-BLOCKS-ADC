@@ -1,0 +1,33 @@
+// VerilogA for Clocked Comparator
+//nishanchettri
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module VerilogA_ClockedComparator( vout, vin1, vin2, clk );
+
+parameter real clk_th=0.9; //For Supply of 1.8V , Threshold = VDD/2 
+parameter real delay = 0;
+parameter real ttime = 1f;
+
+input vin1, vin2, clk ;
+output vout;
+
+electrical vout, vin1, vin2, clk ;
+real d_result;
+
+analog begin
+
+	@(cross(V(clk) - clk_th, -1)) begin //-1 means falling edge and +1 means rising edge
+		if(V(vin1) < V(vin2)) begin
+			d_result = 1.8;
+		end
+		else begin
+			d_result = 0;
+		end
+	end
+
+	V(vout) <+ transition(d_result,delay,ttime);		
+end
+
+endmodul
